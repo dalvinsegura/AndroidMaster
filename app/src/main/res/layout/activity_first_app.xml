@@ -1,53 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:andrandroid="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent"
+    andrandroid:layout_width="match_parent"
+    andrandroid:layout_height="match_parent"
     tools:context=".firstapp.FirstAppActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Hello World"
-        android:textSize="22sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Hello World"
-        android:textSize="22sp" />
+        andrandroid:layout_width="wrap_content"
+        andrandroid:layout_height="wrap_content"
+        andrandroid:layout_marginTop="64dp"
+        andrandroid:text="Escribe tu nombre"
+        andrandroid:textColor="@color/black"
+        andrandroid:textSize="35sp"
+        andrandroid:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    android:textSize="22sp"
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Text1 Compat"
-            android:textSize="22sp"
-            />
+    <androidx.appcompat.widget.AppCompatEditText
+        andrandroid:id="@+id/etName"
+        andrandroid:layout_width="0dp"
+        andrandroid:layout_height="wrap_content"
+        andrandroid:layout_marginStart="32dp"
+        andrandroid:layout_marginEnd="32dp"
+        andrandroid:layout_marginBottom="32dp"
+        andrandroid:maxLines="1"
+        andrandroid:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Text1 Compat"
-            android:textSize="22sp"
-            />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.AppCompatButton
+        andrandroid:id="@+id/btnStart"
+        andrandroid:layout_width="wrap_content"
+        andrandroid:layout_height="wrap_content"
+        andrandroid:background="@color/teal_200"
+        andrandroid:text="Hello World"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Hello World"
-        android:textSize="22sp"
-        tools:ignore="HardcodedText" />
-
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
