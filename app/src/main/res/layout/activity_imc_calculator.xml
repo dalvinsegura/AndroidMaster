@@ -106,10 +106,10 @@
                 android:id="@+id/tvHeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="120 cm"
                 android:textColor="@color/white"
                 android:textSize="38sp"
-                android:textStyle="bold"
-                tools:text="120 cm" />
+                android:textStyle="bold" />
 
             <com.google.android.material.slider.RangeSlider
                 android:id="@+id/rsHeight"
