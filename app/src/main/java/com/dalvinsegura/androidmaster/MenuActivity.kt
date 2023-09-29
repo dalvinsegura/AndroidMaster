@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.dalvinsegura.androidmaster.firstapp.FirstAppActivity
 import com.dalvinsegura.androidmaster.imccalculator.ImcCalculatorActivity
+import com.dalvinsegura.androidmaster.todoapp.TodoActivity
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,10 +14,16 @@ class MenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu)
         val btnSaludApp = findViewById<Button>(R.id.btnSaludApp)
         val btnImcCalculatorApp = findViewById<Button>(R.id.btnImcCalculatorApp)
+        val btnTODO = findViewById<Button>(R.id.btnTODO)
         btnSaludApp.setOnClickListener{navigateToSaludApp()}
         btnImcCalculatorApp.setOnClickListener{navigateToImcApp()}
+        btnTODO.setOnClickListener { navigateToTodoApp() }
     }
 
+    private fun navigateToTodoApp(){
+        val intent = Intent(this, TodoActivity::class.java)
+        startActivity(intent)
+    }
     private fun navigateToImcApp(){
         val intent = Intent(this, ImcCalculatorActivity::class.java)
         startActivity(intent)
