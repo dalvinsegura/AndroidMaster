@@ -27,5 +27,6 @@
     <!-- TodoApp-->
     <string name="todo_title">Bienvenido, Dalvin</string>
     <string name="todo_categories">Categorias</string>
+    <string name="todo_tasks">Tareas</string>
 
 </resources>
